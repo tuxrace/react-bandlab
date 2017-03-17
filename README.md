@@ -8,7 +8,7 @@
 
     yarn install
     yarn start
-    http://localhost:8080
+    http://localhost:8080/react-bandlab
 
 ## Build file
 
