@@ -1,9 +1,5 @@
 # React Bandlab
 
-## Running Demo
-
-    https://tuxrace.github.io/react-bandlab/
-
 ## Instructions
 
     yarn install
