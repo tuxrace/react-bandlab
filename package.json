@@ -6,7 +6,7 @@
   "scripts": {
     "start": "webpack-dev-server",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "webpack --config ./webpack.config.prod.js"
+    "build": "webpack --progress --colors --config webpack.config.prod.js -p"
   },
   "keywords": [],
   "author": "Gerard Banasig",
