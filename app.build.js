@@ -25796,7 +25796,7 @@ var Nav = function Nav() {
     _react2.default.createElement(
       _reactRouter.Link,
       { to: '/react-bandlab/' },
-      ' Posts '
+      ' Postsww '
     ),
     ' |',
     _react2.default.createElement(
