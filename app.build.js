@@ -25795,13 +25795,13 @@ var Nav = function Nav() {
     { role: 'nav' },
     _react2.default.createElement(
       _reactRouter.Link,
-      { to: '/' },
+      { to: '/react-bandlab/' },
       ' Posts '
     ),
     ' |',
     _react2.default.createElement(
       _reactRouter.Link,
-      { to: '/audios' },
+      { to: '/react-bandlab/audios' },
       ' Audios '
     )
   );
