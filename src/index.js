@@ -25,7 +25,7 @@ ReactDOM.render(
   <Provider store={store}>
     <Router history={browserHistory}>
       <div>
-        <Route path="/react-bandlab/" component={Posts} />
+        <Route path="/react-bandlab" component={Posts} />
         <Route path="/react-bandlab/audios" component={Audios} />
       </div>
     </Router>
