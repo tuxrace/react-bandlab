@@ -9,7 +9,6 @@ export const loadPosts = data => (dispatch, getState) => {
   .then(r => r.json())
   .then(r => r.map(username))
   .then(r => r.map(x => x.then(y => dispatch({type: 'LOAD_POSTS', data: y}))))
-  // .then(r => dispatch({type: 'LOAD_POSTS', data: r}))
 }
 
 export const sort = data => (dispatch, getState) => {
@@ -38,4 +37,13 @@ export const group = data => (dispatch, getState) => {
   })
   const n = sorted.map(x => posts[x])
   dispatch({type: 'SORT', data: n})
+}
+
+export const allPosts = data => (dispatch, getState) => {
+  const { posts } = data
+  const sorted = Object.keys(posts).sort((a, b) => {
+    a - b
+  })
+  const n = sorted.map(x => posts[x])
+  dispatch({type: 'ALL_POSTS', data: n})
 }
