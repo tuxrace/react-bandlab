@@ -1,15 +1,14 @@
-var webpack = require('webpack')
 
 module.exports = {
-  entry:{
+  entry: {
     app: './src/index.js',
-    vendor: ['react','react-dom','redux','react-redux']
+    vendor: ['react', 'react-dom', 'redux', 'react-redux']
   },
-  output:{
-    filename: '[name].build.js'
+  output: {
+    filename: './dist/[name].build.js'
   },
-  module:{
-    loaders:[
+  module: {
+    loaders: [
       {
         test: /\.js$/,
         loader: 'babel-loader',

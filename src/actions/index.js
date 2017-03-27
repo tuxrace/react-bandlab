@@ -14,11 +14,10 @@ export const loadPosts = data => (dispatch, getState) => {
 export const sort = data => (dispatch, getState) => {
   const { posts } = data
   const sorted = Object.keys(posts).sort((a, b) => {
-    var first = posts[a].title.toLowerCase(), next = posts[b].title.toLowerCase()
-    if (first < next)
-      {return -1}
-    if (first > next)
-      {return 1}
+    const first = posts[a].title.toLowerCase()
+    const next = posts[b].title.toLowerCase()
+    if (first < next) { return -1 }
+    if (first > next) { return 1 }
     return 0
   })
   const n = sorted.map(x => posts[x])
@@ -28,22 +27,12 @@ export const sort = data => (dispatch, getState) => {
 export const group = data => (dispatch, getState) => {
   const { posts } = data
   const sorted = Object.keys(posts).sort((a, b) => {
-    var first = posts[a].username.toLowerCase(), next = posts[b].username.toLowerCase()
-    if (first < next)
-      {return -1}
-    if (first > next)
-      {return 1}
+    const first = posts[a].username.toLowerCase()
+    const next = posts[b].username.toLowerCase()
+    if (first < next) { return -1 }
+    if (first > next) { return 1 }
     return 0
   })
   const n = sorted.map(x => posts[x])
   dispatch({type: 'SORT', data: n})
-}
-
-export const allPosts = data => (dispatch, getState) => {
-  const { posts } = data
-  const sorted = Object.keys(posts).sort((a, b) => {
-    a - b
-  })
-  const n = sorted.map(x => posts[x])
-  dispatch({type: 'ALL_POSTS', data: n})
 }
